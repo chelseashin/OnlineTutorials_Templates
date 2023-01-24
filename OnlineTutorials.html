@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" class="hydrated">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Tutorials - SPA</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="aperture-outline"></ion-icon></span>
+                        <span class="title">무선망 구축공정 관리시스템</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="bar-chart-outline"></ion-icon></span>  
+                        <span class="title">대시보드</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="list-outline"></ion-icon></span>
+                        <span class="title">공정별 관리대상 리스트</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="list-circle-outline"></ion-icon></span>
+                        <span class="title">사업별 관리대상 리스트</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="cloud-upload-outline"></ion-icon></span>
+                        <span class="title">수합용 엑셀 업로드</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                        <span class="title">내 관리대상 조회</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="title">로그아웃</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+        <div class="topbar">
+            <div class="toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+            <!-- Search -->
+            <div class="search">
+                <label>
+                    <input type="text" placeholder="Search Here!">
+                    <ion-icon name="search-outline"></ion-icon>
+                </label>
+            </div>
+            <!-- UserImage  -->
+            <div class="user">
+                <img src="https://images-production.bookshop.org/spree/affiliate_profiles/profile_images/23121/original/Icon.jpg?1615077697" alt="userimage">
+            </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="cardBox">
+            <div class="card">
+                <div>
+                    <div class="numbers">1,320</div>
+                    <div class="cardName">Monthly Complete!</div>
+                </div>
+                <div class="iconBox">
+                    <ion-icon name="eye-outline"></ion-icon>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="numbers">120</div>
+                    <div class="cardName">Daily Complete!</div>
+                </div>
+                <div class="iconBox">
+                    <ion-icon name="eye-outline"></ion-icon>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="numbers">32</div>
+                    <div class="cardName">Daily Complete</div>
+                </div>
+                <div class="iconBox">
+                    <ion-icon name="eye-outline"></ion-icon>
+                </div>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="numbers">1084</div>
+                    <div class="cardName">Remains</div>
+                </div>
+                <div class="iconBox">
+                    <ion-icon name="eye-outline"></ion-icon>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script>
+        // Menu Toggle
+        let toggle = document.querySelector('.toggle');
+        let navigation= document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+
+        toggle.onclick = function() {
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+
+        // Add hovered class in selected list item
+        let list = document.querySelectorAll('.navigation li');
+        function activeLink(){
+            list.forEach((item) => 
+            item.classList.remove('hovered'));
+            this.classList.add('hovered');
+        }
+        list.forEach((item) => 
+        item.addEventListener('mouseover', activeLink));
+    </script>
+
+</body>
+</html>
