@@ -302,3 +302,135 @@ body {
     color: var(--white);
     border-radius: 6px;
 }
+
+.details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.details table thead td {
+    font-weight: 600;
+    font-size: 1.1em;
+    padding-bottom: 5px;
+}
+
+.details .recentRS table tr {
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+
+.details .recentRS table tr:last-child {
+    border-bottom: none;
+}
+
+.details .recentRS table tbody tr:hover {
+    background: var(--blue);
+    color: var(--white);
+
+}
+
+.details .recentRS table tr td {
+    padding: 10px; 
+}
+
+.details .recentRS table tr td:last-child {
+    text-align: end;
+}
+
+.details .recentRS table tr td:nth-child(2) {
+    text-align: end;
+}
+
+.details .recentRS table tr td:nth-child(3) {
+    text-align: center;
+}
+
+.status.pending {
+    padding: 2px 4px;
+    background-color: #8de02c;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.status.delay {
+    padding: 2px 4px;
+    background-color: #f00;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.status.design {
+    padding: 2px 4px;
+    background-color: #f9ca3f;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.status.complete {
+    padding: 2px 4px;
+    background-color: #1795ce;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.details .recentWorkers {
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    background-color: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.1);
+    border-radius: 20px;
+}
+
+.recentWorkers .imgBx {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.recentWorkers .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recentWorkers table tr:hover {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.recentWorkers table tr td {
+    padding: 12px 10px;
+}
+
+.recentWorkers table tr td h4 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+.recentWorkers table tr td span {
+    font-size: 14px;
+    color: var(--black2);
+}
+
+.recentWorkers table tr:hover td h4 span {
+    color: var(--white);
+}
+
