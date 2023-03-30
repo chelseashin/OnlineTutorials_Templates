@@ -21,15 +21,15 @@ console.log(monthsList);
 
 ////////////////////////////////////////////////////////
 
-let months_list = [];
+let _monthsList = [];
 let d = new Date();
 
 for (let i = 0; i < 12; i++) {
-  d.setMonth(d.getMonth() - 1);
   let monthName = d.toLocaleString("default", { month: "short" }).toUpperCase();
   let year = d.getFullYear().toString().substr(-2);
   let monthAndYear = monthName + " " + year;
-  months_list.push(monthAndYear);
+  _monthsList.push(monthAndYear);
+  d.setMonth(d.getMonth() - 1);
 }
 
-console.log(months_list.reverse());
+console.log(_monthsList.reverse());
