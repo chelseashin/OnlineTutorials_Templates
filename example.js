@@ -24,16 +24,38 @@ console.log(monthsList);
 
 
 ////////////////////////////////////////////////////////
+// Create an empty array to store the months
+const last12Months = [];
 
-let _monthsList = [];
-let d = new Date();
+// Get the current date
+const currentDate = new Date();
 
+// Define an array of month names
+const monthNames = [
+  'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+  'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+];
+
+// Loop through the past 12 months
 for (let i = 0; i < 12; i++) {
-  let monthName = d.toLocaleString("default", { month: "short" }).slice(0, 3);
-  let year = d.getFullYear().toString().substr(-2);
-  let monthAndYear = monthName + " " + year;
-  _monthsList.push(monthAndYear);
-  d.setMonth(d.getMonth() - 1);
+  // Get the month for the current iteration
+  const month = currentDate.getMonth() - i;
+  
+  // Get the year for the current iteration
+  const year = currentDate.getFullYear();
+  
+  // If the month is less than 0 (i.e. January of the previous year), adjust the year and month accordingly
+  if (month < 0) {
+    month += 12;
+    year -= 1;
+  }
+  
+  // Format the month and year as a string in the desired format
+  const formattedMonth = `${monthNames[month]} ${String(year).substr(2, 2)}`;
+  
+  // Add the formatted month to the array
+  last12Months.push(formattedMonth);
 }
 
-console.log(_monthsList.reverse());
+// The last12Months array now contains the past 12 months, represented as strings in the format "MON YY"
+console.log(last12Months);
