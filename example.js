@@ -25,7 +25,7 @@ let _monthsList = [];
 let d = new Date();
 
 for (let i = 0; i < 12; i++) {
-  let monthName = d.toLocaleString("default", { month: "short" }).toUpperCase();
+  let monthName = d.toLocaleString("default", { month: "short" }).slice(0, 3);
   let year = d.getFullYear().toString().substr(-2);
   let monthAndYear = monthName + " " + year;
   _monthsList.push(monthAndYear);
